@@ -1,6 +1,6 @@
 {
   "name": "supracodes/cli-venmo-account-checker",
-  "description": "A command-line application for efficiently checking multiple American Express accounts.",
+  "description": "A command-line application for efficiently checking multiple Venmo accounts.",
   "authors": [
     {
       "name": "Supra Billionaire",
