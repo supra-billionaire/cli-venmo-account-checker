@@ -44,11 +44,11 @@ class AccountCheckCommand extends Command
     {
         return collect(
             value: (array)File::lines(path: $listFilePath)
-                ->map(callback: fn($line) => explode(separator: ':', string: $line))
+                ->map(callback: fn($line) => explode(separator: ':', string: str_replace(["\r", "\n"], "", $line)))
                 ->filter(callback: fn($accountParts) => count(value: $accountParts) === 2)
                 ->map(callback: fn($accountParts) => [
-                    'user_id' => $accountParts[0] ?? null,
-                    'password' => $accountParts[1] ?? null,
+                    'user_id' => trim($accountParts[0]) ?? null,
+                    'password' => trim($accountParts[1]) ?? null,
                 ])
                 ->filter(callback: fn($account) => $account['user_id'] !== null && $account['password'] !== null)
                 ->toArray()
