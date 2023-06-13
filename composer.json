@@ -1,5 +1,5 @@
 {
-  "name": "supracodes/cli-amex-account-checker",
+  "name": "supracodes/cli-venmo-account-checker",
   "description": "A command-line application for efficiently checking multiple American Express accounts.",
   "authors": [
     {
@@ -43,6 +43,6 @@
   "minimum-stability": "stable",
   "prefer-stable": true,
   "bin": [
-    "builds/amex"
+    "builds/venmo"
   ]
 }
